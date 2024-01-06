@@ -56,6 +56,14 @@ html
     }
 
 }
+@media(max-width: 410px) {
+
+    html
+    {
+        font-size: 5px;
+    }
+
+}
 
 body
 {
@@ -132,7 +140,7 @@ h6
 
 p
 {
-    font-size: 3.4rem;
+    font-size: 4rem;
     line-height: 1.4em;
     letter-spacing: -0.005em;
     font-weight: 300;
@@ -2276,6 +2284,12 @@ _:-ms-fullscreen, :root .section-container .section.y-center .container
     }
    
 }
+@media (max-width: 450px){
+    .h1
+    {
+        font-size: 8rem;
+    }
+}
 .words {
 	display: inline;
 	text-align: center;
@@ -2295,6 +2309,7 @@ _:-ms-fullscreen, :root .section-container .section.y-center .container
 	font-weight: 700;
 	-webkit-text-size-adjust: none;
 	text-shadow: 0 0 10px black;
+    text-indent: 25px;
 }
 
 .rotate span {
@@ -2486,4 +2501,12 @@ h1.big-title span {
 	100% {
 		background-position: 100% 50%;
 	}
+}
+.button-text {
+    font-weight: 500;
+    transition: color 0.3s ease; 
+}
+
+.default-button:hover .button-text {
+    color: rgb(111, 212, 237); 
 }
