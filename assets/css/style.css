@@ -56,6 +56,14 @@ html
     }
 
 }
+@media(max-width: 410px) {
+
+    html
+    {
+        font-size: 5px;
+    }
+
+}
 
 body
 {
@@ -124,6 +132,9 @@ h5
     line-height: 1.18em;
 }
 
+.hidden-br {
+    display: none;
+}
 h6
 {
     font-size: 3rem;
@@ -132,13 +143,13 @@ h6
 
 p
 {
-    font-size: 3.4rem;
+    font-size: 4rem;
     line-height: 1.4em;
     letter-spacing: -0.005em;
     font-weight: 300;
     margin-top: 0;
     margin-bottom: 0rem;
-    color: #6faede;
+    color: #a7d9ff;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -560,9 +571,7 @@ select:-webkit-autofill:focus
 /** 4. Loading Screen
 *****************************************************************/
 
-.loading-screen 
-{
-
+.loading-screen {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -574,64 +583,87 @@ select:-webkit-autofill:focus
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     will-change: transform;
-
 }
 
-.loading-screen .inner 
-{
+.loading-screen .inner {
     overflow: hidden;
 }
 
-.loading-screen .text-box 
-{
+.loading-screen .text-box {
     overflow: hidden;
     margin-bottom: .6rem;
+    font-size: 4vw; /* Default responsive font size */
+    font-weight: 600; 
+    font-family: Bebas Neue;
 }
 
-.loading-screen .line-frame
-{
+.loading-screen .line-frame {
     overflow: hidden;
     height: 3px;
     width: 100%;
     position: relative;
 }
 
-.loading-screen .line
-{
+.loading-screen .line {
     position: absolute; 
     width: 100%;
     height: 100%;
     -webkit-transform: translate(-50%,-50%);
-        -ms-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
     background-image: linear-gradient(0deg, #09203f 0%, #537895 100%);
-    /* background: rgba(255,255,255,.6); */
     -webkit-animation-name: loader_animation;
-            animation-name: loader_animation;
+    animation-name: loader_animation;
     will-change: transform;
     -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+    animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
     -webkit-animation-play-state: running;
-            animation-play-state: running;
+    animation-play-state: running;
     -webkit-animation-timing-function: cubic-bezier(.4,.1,.2,1);
-            animation-timing-function: cubic-bezier(.4,.1,.2,1);
-
-            
+    animation-timing-function: cubic-bezier(.4,.1,.2,1);
 }
+
+/* Adjustments for iPhone 15 */
+@media (max-width: 480px) {
+    .loading-screen .text-box {
+        font-size: 10vw; /* Adjust the value as needed */
+    }
+}
+
+/* Additional adjustments for other screen sizes */
+@media (min-width: 481px) and (max-width: 768px) {
+    .loading-screen .text-box {
+        font-size: 10vw; /* Adjust the value as needed */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .loading-screen .text-box {
+        font-size: 10vw; /* Adjust the value as needed */
+    }
+}
+
+@media (min-width: 1025px) {
+    .loading-screen .text-box {
+        font-size: 10vw; /* Adjust the value as needed */
+    }
+}
+
+
 .gradient-text_contact {
 	background: #4b8eb7;
 	background: linear-gradient(to right, #4b8eb7, #8df9ff); 
@@ -2276,6 +2308,12 @@ _:-ms-fullscreen, :root .section-container .section.y-center .container
     }
    
 }
+@media (max-width: 450px){
+    .h1
+    {
+        font-size: 8rem;
+    }
+}
 .words {
 	display: inline;
 	text-align: center;
@@ -2295,6 +2333,7 @@ _:-ms-fullscreen, :root .section-container .section.y-center .container
 	font-weight: 700;
 	-webkit-text-size-adjust: none;
 	text-shadow: 0 0 10px black;
+    text-indent: 25px;
 }
 
 .rotate span {
@@ -2486,4 +2525,50 @@ h1.big-title span {
 	100% {
 		background-position: 100% 50%;
 	}
+}
+.button-text {
+    font-weight: 500;
+    transition: color 0.3s ease; 
+}
+
+.default-button:hover .button-text {
+    color: rgb(111, 212, 237); 
+}
+
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #ffffff;
+  -webkit-animation: 1s ease 0.4s infinite cursor;
+          animation: 1s ease 0.4s infinite cursor;
+  /* background: #1ba4ca; */
+  padding: 0 5px;
+}
+
+@-webkit-keyframes cursor {
+  0% {
+    border-right: 0.08em solid #666;
+  }
+  35% {
+    border-right: 0.08em solid rgba(0, 0, 0, 0);
+  }
+  70% {
+    border-right: 0.08em solid #666;
+  }
+  100% {
+    border-right: 0.08em solid #666;
+  }
+}
+
+@keyframes cursor {
+  0% {
+    border-right: 0.08em solid #666;
+  }
+  35% {
+    border-right: 0.08em solid rgba(0, 0, 0, 0);
+  }
+  70% {
+    border-right: 0.08em solid #666;
+  }
+  100% {
+    border-right: 0.08em solid #666;
+  }
 }
